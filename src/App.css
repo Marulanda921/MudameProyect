@@ -1,0 +1,197 @@
+
+.saltico {
+  animation: rebote 0.6s infinite;
+}
+
+@keyframes rebote {
+  0%,
+  100% {
+    transform: translateY(-4%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.camionsito {
+  rotate: 225deg;
+  position: absolute;
+  top: 5vh;
+  
+  width: 15rem;
+  z-index: 500;
+  animation: reboteArriba 0.6s infinite;
+}
+
+@keyframes reboteArriba {
+  0%,
+  100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.infinite {
+  position: absolute;
+  bottom: 0px;
+  width: 100vw;
+  z-index: 5;
+  height: 12rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(39 39 42 / var(--tw-bg-opacity));
+  transform-origin: bottom;
+  transform-style: preserve-3d;
+  transform: rotatex(30deg);
+}
+.infinite::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 140vw;
+  height: 10px;
+  background: linear-gradient(
+    90deg,
+    rgb(202 138 4) 0%,
+    rgb(202 138 4) 50%,
+    rgb(39 39 42) 50%,
+    rgb(39 39 42) 100%
+  );
+  background-size: 240px;
+  animation: animate 1s linear reverse infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 240px;
+  }
+}
+
+
+
+.mountains {
+  position: absolute;
+  bottom: 0vh;
+  width: 100vw;
+  height: 600px;
+  transform: scale(2, 1);
+  background-color: rgba(255, 255, 255, 0);
+  transform-origin: top;
+}
+.mountains::before {
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    30deg,
+    #223d31 10%,
+    #335C49 50%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 50%
+  );
+  background-size: 270px;
+  transform: skew(-30deg, 0deg);
+  animation: colina 4s linear reverse infinite;
+}
+
+.otraM {
+  position: absolute;
+  bottom: 35vh;
+  z-index: -3;
+  width: 100vw;
+  height: 600px;
+  transform: scale(3, 1.2);
+  background-color: rgba(255, 255, 255, 0);
+  transform-origin: top;
+}
+.otraM::before {
+  content: "";
+  position: absolute;
+  bottom: -30%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    30deg,
+    #445d2a 0%,
+    #678C40 60%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 50%
+  );
+  background-size: 270px;
+  transform: skew(-40deg, 0deg);
+  animation: colina 8s linear reverse infinite;
+}
+
+.doble {
+  position: absolute;
+  bottom: 50vh;
+  z-index: -5;
+  width: 100vw;
+  height: 600px;
+  transform: scale(4, 1.2);
+  background-color: rgba(255, 255, 255, 0);
+  transform-origin: top;
+}
+.doble::before {
+  content: "";
+  position: absolute;
+  bottom: -15%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    30deg,
+    #8a8a27 0%,
+    #BDBE36 60%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 50%
+  );
+  background-size: 270px;
+  transform: skew(-40deg, 0deg);
+  animation: colina 23s linear reverse infinite;
+}
+
+@keyframes colina {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 270px;
+  }
+}
+
+.principal{
+  position: relative;
+
+  width:  100vw;
+  height:20rem;
+  rotate: 90deg;
+  overflow: hidden;
+  --tw-bg-opacity: 1;
+  background-color: rgb(39 39 42 / var(--tw-bg-opacity));
+}
+
+.principal::before{
+  content: "";
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  height: 20%;
+  background: linear-gradient(
+    90deg,
+    #8a8a27 0%,
+    #BDBE36 50%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 50%
+  );
+  background-size:240px;
+  animation: animate 2s linear reverse infinite;
+}
